@@ -1,4 +1,8 @@
+
 <?php
+/**
+ * @var \TresdTech\FinalProject\Block\Table $block
+ */
  $collection = $block->getCollection();
 if ($collection->count()) {
 ?>
@@ -26,7 +30,7 @@ if ($collection->count()) {
                 <?php echo $item->getfisrt_name() ?>
             </td>
             <td data-th="<?= $block->escapeHtml(__('Last Name')) ?>" class="col last_name">
-                <?php echo $item->last_name() ?>
+                <?php echo $item->getlast_name() ?>
             </td>
             <td data-th="<?= $block->escapeHtml(__('Email')) ?>" class="col email">
                 <?php echo $item->getemail() ?>
@@ -43,4 +47,8 @@ if ($collection->count()) {
 </div>
 <?php
  }
+ else { 
  ?>
+ <h1>"No hay registros"</h1>
+ <button onclick="window.location.href='<?=$this->getUrl('*/*/index', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Action</button>
+ <?php } ?>

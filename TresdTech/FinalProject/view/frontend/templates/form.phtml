@@ -1,32 +1,37 @@
-<form class="form col-12 row" method="post" name="DataForm" id="DataForm"
+<form data-mage-init='{"validation":{"rules": {"field-4": {"required":true}}}}' class="form col-12 row" method="post" name="DataForm" id="DataForm"
 action="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>">
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">First Name</legend>
         <div class="col-md-8">
-            <input data-mage-init='{"validation":{"required":true,"letters-only":true}}' type="text" class="form-control" name="fisrt_name" id="inputFirstName" placeholder="First Name">
+            <input type="text" class="form-control" name="fisrt_name" id="inputFirstName" placeholder="First Name">
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Last Name</legend>
         <div class="col-md-8">
-            <input data-mage-init='{"validation":{"required":true,"letters-only":true}}' type="text" class="form-control" name="last_name" id="inputLastName" placeholder="Last Name">
+            <input data-validate='{"validation":{"required":true,"letters-only":true}}' type="text" class="form-control" name="last_name" id="inputLastName" placeholder="Last Name" data-validate='{"validation":{"required":true,"letters-only":true}}'/>
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Email</legend>
         <div class="col-md-8">
-            <input data-mage-init='{"validation":{"required":true,"email":true}}' type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
+            <input data-validate='{"validation":{"required":true,"email":true}}' type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Telephone</legend>
         <div class="col-md-8">
-            <input data-mage-init='{"validation":{"required":true,"digits":true}}' type="text" class="form-control" name="telephone" id="inputTelephone" placeholder="Telephone">
+            <input data-validate='{"validation":{"required":true,"digits":true}}' type="text" class="form-control" name="telephone" id="inputTelephone" placeholder="Telephone">
         </div>
     </div>
     <div class="mb-3 col-md-6 row text-center">
         <div class="offset-sm-4 col-sm-8">
-            <button type="submit" class="btn btn-primary btn-lg" >Action</button>
+            <button type="submit" class="action submit primary" >Enviar</button>
         </div>
-    </div>
+    </div> 
 </form>
+<div class="mb-3 col-md-6 row text-center">
+    <div class="offset-sm-4 col-sm-8">
+        <button onclick="window.location.href='<?=$this->getUrl('*/*/Submit', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Regresar al formulario</button>
+    </div>
+</div>

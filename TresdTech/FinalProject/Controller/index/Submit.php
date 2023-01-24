@@ -26,7 +26,7 @@ class Submit extends Action
         Post $postFactory
         )
     {
-        $this->resultPageFactory = $pageFactory;
+        $this->_pageFactory = $pageFactory;
         $this->_postFactory = $postFactory;
         parent::__construct($context);
     }
@@ -40,7 +40,12 @@ class Submit extends Action
     {
         try {
             $data = (array)$this->getRequest()->getPost();
-            if ($data) {
+            $fn = $this->getRequest()->getParam('fisrt_name');
+            $ln = $this->getRequest()->getParam('last_name');
+            $email = $this->getRequest()->getParam('email');
+            $telephone = $this->getRequest()->getParam('telephone');
+
+            if ($data&&$fn&&$ln&&$email&&$telephone) {
                 $model = $this->_postFactory;
                 $model->setData($data)->save();
                 $this->messageManager->addSuccessMessage(__("Se guardaron los datos."));
@@ -48,8 +53,7 @@ class Submit extends Action
         } catch (\Exception $e) {
             $this->messageManager->addErrorMessage($e, __("Ocurrió un error."));
         }
-        $resultPage = $this->resultPageFactory->create();
 
-        return $resultPage;
+        return $this->_pageFactory->create();
     }
 }
