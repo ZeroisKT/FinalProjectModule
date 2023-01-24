@@ -3,25 +3,25 @@ action="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>">
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">First Name</legend>
         <div class="col-md-8">
-            <input type="text" class="form-control" name="fisrt_name" id="inputFirstName" placeholder="First Name">
+            <input type="text" class="input-text" name="fisrt_name" id="inputFirstName" placeholder="First Name" data-validate='{"validation":{"required":true,"letters-only":true}}'/>
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Last Name</legend>
         <div class="col-md-8">
-            <input data-validate='{"validation":{"required":true,"letters-only":true}}' type="text" class="form-control" name="last_name" id="inputLastName" placeholder="Last Name" data-validate='{"validation":{"required":true,"letters-only":true}}'/>
+            <input data-validate='{"validation":{"required":true,"letters-only":true}}' type="text" class="input-text" name="last_name" id="inputLastName" placeholder="Last Name"/>
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Email</legend>
         <div class="col-md-8">
-            <input data-validate='{"validation":{"required":true,"email":true}}' type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
+            <input data-validate='{"validation":{"required":true,"email":true}}' type="text" class="input-text" name="email" id="inputEmail" placeholder="Email">
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Telephone</legend>
         <div class="col-md-8">
-            <input data-validate='{"validation":{"required":true,"digits":true}}' type="text" class="form-control" name="telephone" id="inputTelephone" placeholder="Telephone">
+            <input data-validate='{"validation":{"required":true,"digits":true}}' type="text" class="input-text" name="telephone" id="inputTelephone" placeholder="Telephone">
         </div>
     </div>
     <div class="mb-3 col-md-6 row text-center">
@@ -35,3 +35,10 @@ action="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>">
         <button onclick="window.location.href='<?=$this->getUrl('*/*/Submit', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Regresar al formulario</button>
     </div>
 </div>
+<script type="text/x-magento-init">
+    {
+        "#custom-form": {
+            "validation": {}
+        }
+    }
+</script>
