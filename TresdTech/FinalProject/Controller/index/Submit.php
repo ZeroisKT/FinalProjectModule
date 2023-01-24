@@ -46,7 +46,7 @@ class Submit extends Action
                 $this->messageManager->addSuccessMessage(__("Se guardaron los datos."));
             }
         } catch (\Exception $e) {
-            $this->messageManager->addErrorMessage($e, __("No se pudieron guardar los datos."));
+            $this->messageManager->addErrorMessage($e, __("Ocurrió un error."));
         }
         $resultPage = $this->resultPageFactory->create();
 

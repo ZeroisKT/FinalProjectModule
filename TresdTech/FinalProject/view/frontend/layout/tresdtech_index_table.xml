@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="TresdTech\FinalProject\Block\Table" name="tresdtech_index_submit"
+            <block class="TresdTech\FinalProject\Block\Table" name="tresdtech_index_table"
                    template="TresdTech_FinalProject::Table.phtml" cacheable="false"/>
         </referenceContainer>
     </body>
