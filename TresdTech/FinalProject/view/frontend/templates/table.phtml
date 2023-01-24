@@ -44,11 +44,12 @@ if ($collection->count()) {
         <?php endforeach; ?>
         </tbody>
     </table>
+    <button onclick="window.location.href='<?=$this->getUrl('*/*/index', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Formulario</button>
 </div>
 <?php
  }
  else { 
  ?>
  <h1>"No hay registros"</h1>
- <button onclick="window.location.href='<?=$this->getUrl('*/*/index', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Action</button>
+ <button onclick="window.location.href='<?=$this->getUrl('*/*/index', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Formulario</button>
  <?php } ?>
