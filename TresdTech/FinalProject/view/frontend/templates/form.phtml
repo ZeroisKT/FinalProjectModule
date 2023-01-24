@@ -3,25 +3,25 @@ action="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>">
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">First Name</legend>
         <div class="col-md-8">
-            <input type="text" class="form-control" name="fisrt_name" id="inputFirstName" placeholder="First Name">
+            <input data-mage-init='{"validation":{"required":true,"letters-only":true}}' type="text" class="form-control" name="fisrt_name" id="inputFirstName" placeholder="First Name">
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Last Name</legend>
         <div class="col-md-8">
-            <input type="text" class="form-control" name="last_name" id="inputLastName" placeholder="Last Name">
+            <input data-mage-init='{"validation":{"required":true,"letters-only":true}}' type="text" class="form-control" name="last_name" id="inputLastName" placeholder="Last Name">
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Email</legend>
         <div class="col-md-8">
-            <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
+            <input data-mage-init='{"validation":{"required":true,"email":true}}' type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
         </div>
     </div>
     <div class="mb-3 col-md-6 row">
         <legend class="col-form-legend col-md-4">Telephone</legend>
         <div class="col-md-8">
-            <input type="text" class="form-control" name="telephone" id="inputTelephone" placeholder="Telephone">
+            <input data-mage-init='{"validation":{"required":true,"digits":true}}' type="text" class="form-control" name="telephone" id="inputTelephone" placeholder="Telephone">
         </div>
     </div>
     <div class="mb-3 col-md-6 row text-center">
