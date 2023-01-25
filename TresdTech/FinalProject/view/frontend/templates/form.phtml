@@ -1,43 +1,51 @@
-<form data-mage-init='{"validation":{"rules": {"field-4": {"required":true}}}}' class="form col-12 row" method="post" name="DataForm" id="DataForm"
-action="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>">
-    <div class="mb-3 col-md-6 row">
-        <legend class="col-form-legend col-md-4">First Name</legend>
-        <div class="col-md-8">
-            <input type="text" class="input-text" name="fisrt_name" id="inputFirstName" placeholder="First Name" data-validate='{"validation":{"required":true,"letters-only":true}}'/>
+
+<div>
+    <form data-mage-init='{"validation": {}}' action="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>" class="form" id="dataForm" method="post">
+        <fieldset class="fieldset">
+            <div class="field name required">
+                <label class="label" for="fisrt_name"><span>First Name</span></label>
+                <div class="control">
+                    <input name="fisrt_name" id="fisrt_name" title="First Name" value=""  class="input-text" type="text" data-validate='{"required":true, "letters-only": true}'/>
+                </div>
+            </div>
+            <div class="field name required">
+                <label class="label" for="fisrt_name"><span>Last Name</span></label>
+                <div class="control">
+                    <input name="last_name" id="last_name" title="Last Name" value=""  class="input-text" type="text" data-validate='{"required":true, "letters-only": true}'/>
+                </div>
+            </div>
+            <div class="field name required">
+                <label class="label" for="fisrt_name"><span>Email</span></label>
+                <div class="control">
+                    <input name="email" id="email" title="Email" value=""  class="input-text" type="text" data-validate='{"required":true, "email": true}'/>
+                </div>
+            </div>
+            <div class="field name required">
+                <label class="label" for="fisrt_name"><span>Telephone</span></label>
+                <div class="control">
+                    <input name="telephone" id="telephone" title="Telephone" value=""  class="input-text" type="text" data-validate='{"required":true, "digits": true}'/>
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" title="Submit" class="action submit primary">
+                    <span>Submit</span>
+                </button>
+            </div>
+            <div class="secondary">
+                <a class="action check" type="button" href="<?=$this->getUrl('*/*/submit', ['_secure' => true])?>">
+                    <span>Table</span>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="mb-3 col-md-6 row">
-        <legend class="col-form-legend col-md-4">Last Name</legend>
-        <div class="col-md-8">
-            <input data-validate='{"validation":{"required":true,"letters-only":true}}' type="text" class="input-text" name="last_name" id="inputLastName" placeholder="Last Name"/>
-        </div>
-    </div>
-    <div class="mb-3 col-md-6 row">
-        <legend class="col-form-legend col-md-4">Email</legend>
-        <div class="col-md-8">
-            <input data-validate='{"validation":{"required":true,"email":true}}' type="text" class="input-text" name="email" id="inputEmail" placeholder="Email">
-        </div>
-    </div>
-    <div class="mb-3 col-md-6 row">
-        <legend class="col-form-legend col-md-4">Telephone</legend>
-        <div class="col-md-8">
-            <input data-validate='{"validation":{"required":true,"digits":true}}' type="text" class="input-text" name="telephone" id="inputTelephone" placeholder="Telephone">
-        </div>
-    </div>
-    <div class="mb-3 col-md-6 row text-center">
-        <div class="offset-sm-4 col-sm-8">
-            <button type="submit" class="action submit primary" >Enviar</button>
-        </div>
-    </div> 
-</form>
-<div class="mb-3 col-md-6 row text-center">
-    <div class="offset-sm-4 col-sm-8">
-        <button onclick="window.location.href='<?=$this->getUrl('*/*/Submit', ['_secure' => true])?>'" class="btn btn-primary btn-lg" >Regresar al formulario</button>
-    </div>
+    </form>
 </div>
+
+
 <script type="text/x-magento-init">
     {
-        "#custom-form": {
+        "#dataForm": {
             "validation": {}
         }
     }
